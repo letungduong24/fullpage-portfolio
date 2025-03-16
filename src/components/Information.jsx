@@ -29,7 +29,7 @@ const Information = () => {
         [
             'Le Tung Duong',
             '16/06/2004',
-            'Studying Software Engineering at Thuyloi University',
+            'Software Engineering, Thuyloi University',
         ],
     contact:
         [

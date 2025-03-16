@@ -13,13 +13,11 @@ import { IoShareSocial } from "react-icons/io5";
 import { IoIosInformationCircle } from "react-icons/io";
 import { MdContacts } from "react-icons/md";
 import { IoIosCloseCircle } from "react-icons/io";
-import Loading from './Loading';
 
 const Information = () => {
   const [isToggle, setIsToggle] = useState(false)
   const [data, setData] = useState([])
   const [tab, setTab] = useState('')
-  const [isImageLoaded, setIsImageLoaded] = useState(false)
   const [text] = useTypewriter({
     words: ['LETUNGDUONG'],
     typeSpeed: 100,
@@ -50,25 +48,15 @@ const Information = () => {
     setData([])
     setTab('')
   }
+  
 
-useEffect(() => {
-  const img = new Image();
-  img.src = avatar;
-  img.onload = () => setIsImageLoaded(true);
-}, []); 
-
-  if(!isImageLoaded){
-    return <Loading />
-  }
   
   return (
     <div>
-        <div className="">
-            <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-600 font-semibold">
-                Hello, I'm Le Tung Duong
-            </h2>
-            <p className="text-gray-600 md:text-2xl">Web Developer Intern</p>
-        </div>
+        <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-600 font-semibold">
+            Hello, I'm Le Tung Duong
+        </h2>
+        <p className="text-gray-600 md:text-2xl">Web Developer Intern</p>
         <motion.h2 initial={{opacity: 0, scale: 0.8}} whileInView={{opacity: 0.1, scale: 1, transition: {duration: 0.7}}} 
             className='hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 tracking-widest text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl  overflow-hidden'>
             {text}
@@ -86,7 +74,6 @@ useEffect(() => {
                 initial={{opacity: 0, scale: 0.8}} 
                 whileInView={{opacity: 1, scale: 1, transition: {duration: 0.7}}} 
                 className='rounded-3xl' src={avatar} alt="" 
-                onLoad={() => setIsImageLoaded(true)}
             />
             <div className="hidden lg:block">
                 <motion.div initial={{opacity: 0, scale: 0.8}} whileInView={{opacity: 1, scale: 1, transition: {duration: 0.7}}} className="absolute -bottom-20 -left-20 xl:-bottom-10 xl:-left-40 bg-white p-4 rounded-2xl shadow-2xl text-gray-600">

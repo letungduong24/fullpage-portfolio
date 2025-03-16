@@ -9,9 +9,19 @@ import Loading from "./Loading"; // Import component loading của bạn
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500); // Chờ 1 giây trước khi ẩn loading
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="bg-gray-50">
-      <Navbar />
+      {isLoading && <Loading />}
+      {!isLoading && <Navbar />}
       <ReactFullpage
         scrollingSpeed={1000}
         render={() => (

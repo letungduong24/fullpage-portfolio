@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar Desktop */}
-      <div className='hidden lg:flex gap-3 justify-center px-4 fixed right-0 top-0 p-5 z-50 bg-gray-50 mr-5 rounded-2xl'>
+      <div className='hidden lg:flex gap-3 justify-center px-4 fixed right-0 top-0 p-5 z-30 bg-gray-50 mr-5 rounded-2xl'>
         <button className='text-gray-600 text-xl font-bold'>
           duong.
         </button>

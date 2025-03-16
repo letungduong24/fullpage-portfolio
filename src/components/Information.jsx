@@ -19,6 +19,7 @@ const Information = () => {
   const [isToggle, setIsToggle] = useState(false)
   const [data, setData] = useState([])
   const [tab, setTab] = useState('')
+  const [isImageLoaded, setIsImageLoaded] = useState(false)
   const [text] = useTypewriter({
     words: ['LETUNGDUONG'],
     typeSpeed: 100,
@@ -49,8 +50,14 @@ const Information = () => {
     setData([])
     setTab('')
   }
-  
-  if(!avatar){
+
+useEffect(() => {
+  const img = new Image();
+  img.src = avatar;
+  img.onload = () => setIsImageLoaded(true);
+}, []); 
+
+  if(!isImageLoaded){
     return <Loading />
   }
   
@@ -79,6 +86,7 @@ const Information = () => {
                 initial={{opacity: 0, scale: 0.8}} 
                 whileInView={{opacity: 1, scale: 1, transition: {duration: 0.7}}} 
                 className='rounded-3xl' src={avatar} alt="" 
+                onLoad={() => setIsImageLoaded(true)}
             />
             <div className="hidden lg:block">
                 <motion.div initial={{opacity: 0, scale: 0.8}} whileInView={{opacity: 1, scale: 1, transition: {duration: 0.7}}} className="absolute -bottom-20 -left-20 xl:-bottom-10 xl:-left-40 bg-white p-4 rounded-2xl shadow-2xl text-gray-600">

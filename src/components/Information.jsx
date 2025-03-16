@@ -13,6 +13,7 @@ import { IoShareSocial } from "react-icons/io5";
 import { IoIosInformationCircle } from "react-icons/io";
 import { MdContacts } from "react-icons/md";
 import { IoIosCloseCircle } from "react-icons/io";
+import Loading from './Loading';
 
 const Information = () => {
   const [isToggle, setIsToggle] = useState(false)
@@ -49,7 +50,9 @@ const Information = () => {
     setTab('')
   }
   
-
+  if(!avatar){
+    return <Loading />
+  }
   
   return (
     <div>

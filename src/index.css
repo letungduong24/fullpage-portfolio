@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+#root{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.fp-watermark {
+    display: none !important;
+  }
+
+.fp-overflow {
+    flex-grow: 1 !important;
+    display: flex;
+}

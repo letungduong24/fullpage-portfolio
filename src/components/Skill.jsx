@@ -14,7 +14,7 @@ const Skill = () => {
             My Technical Skills
         </h2>
         <motion.div initial={{opacity: 0, scale: 0.8}} whileInView={{opacity: 1, scale: 1, transition: {duration: 0.6}}}  className="lg:mx-30 mt-5 flex-grow flex flex-col">
-            <div className="flex flex-wrap items-center flex-grow gap-3 text-gray-600">
+            <div className="flex flex-wrap items-center flex-grow gap-3 text-gray-600 my-5">
                 <div className="flex gap-5 flex-wrap border p-4 rounded-2xl shadow-">
                 {skills.map((skill) => <button className='hover:text-gray-400 hover:scale-105 duration-300 transition-all  border w-fit h-fit px-4 py-2 rounded-xl'>{skill}</button>)}
                 </div>

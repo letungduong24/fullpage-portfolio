@@ -29,7 +29,7 @@ const Project = () => {
         <div className="flex-grow flex items-center m-5 text-gray-600">
             <div className="grid lg:grid-cols-2 gap-10">
                 {projects.map((project) => (
-                <div className="rounded-2xl border p-4 brightness-100 filter transition-all duration-300 hover:brightness-125">
+                <motion.div initial={{opacity: 0}} whileInView={{opacity: 1, transition: {duration: 0.5}}} className="rounded-2xl border p-4 brightness-100 filter transition-all duration-300 hover:brightness-125">
                     <a target='_blank' href={project.url} >
                         <img className='rounded-lg filter transition-all duration-300' src={project.image} alt="" />
                     </a>
@@ -37,7 +37,7 @@ const Project = () => {
                         <a target='_blank' href={project.url} className='hover:text-gray-400 transition-all duration-300 font-bold text-2xl'>{project.name}</a>
                         <p>{project.description}</p>
                     </div>
-                </div>
+                </motion.div>
             ))}
             </div>
         </div>

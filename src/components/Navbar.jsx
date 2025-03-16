@@ -49,7 +49,7 @@ const Navbar = () => {
       </div>
 
       {/* Navbar Mobile */}
-      <div className="flex flex-col items-end z-50 lg:hidden gap-3 px-4 fixed right-0 top-0 p-5">
+      <div className="flex flex-col items-end z-50 lg:hidden gap-3 px-4 fixed right-0 top-0 p-5 bg-gray-50 ">
         <button onClick={() => setIsToggle(!isToggle)} className='cursor-pointer flex items-center text-gray-600 border border-gray-600 rounded-lg'>
           <BiMenuAltRight className='text-4xl font-bold' />
         </button>

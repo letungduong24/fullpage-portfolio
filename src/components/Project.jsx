@@ -60,7 +60,7 @@ const Project = ({lang}) => {
         <h2 className=" text-5xl text-gray-600 font-semibold w-[80%]">
             {resource.title}
         </h2>
-        <div className="flex-grow flex items-center m-5 text-gray-600">
+        <div className="flex-grow flex items-center my-5 text-gray-600">
             <div className="grid lg:grid-cols-2 gap-10">
                 {resource.projects.map((project) => (
                 <motion.div initial={{opacity: 0}} whileInView={{opacity: 1, transition: {duration: 0.5}}} className="rounded-2xl border p-4 brightness-100 filter transition-all duration-300 hover:brightness-125">

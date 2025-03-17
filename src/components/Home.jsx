@@ -8,6 +8,7 @@ import Project from "./Project";
 import Loading from "./Loading"; // Import component loading của bạn
 
 const Home = () => {
+  const [lang, setLang] = useState('vi')
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -21,29 +22,29 @@ const Home = () => {
   return (
     <div className="bg-gray-50">
       {isLoading && <Loading />}
-      {!isLoading && <Navbar />}
+      {!isLoading && <Navbar lang={lang} setLang={setLang} />}
       <ReactFullpage
         scrollingSpeed={1000}
         render={() => (
           <ReactFullpage.Wrapper>
             <div className="section flex flex-col h-screen">
               <div className="flex-grow p-5 relative">
-                <Information />
+                <Information lang={lang}/>
               </div>
             </div>
             <div className="section flex flex-col h-screen">
               <div className="flex-grow p-5 relative flex flex-col">
-                <Objective />
+                <Objective lang={lang}/>
               </div>
             </div>
             <div className="section flex flex-col h-screen">
               <div className="flex-grow p-5 relative flex flex-col">
-                <Skill />
+                <Skill lang={lang}/>
               </div>
             </div>
             <div className="section flex flex-col h-screen">
               <div className="flex-grow p-5 relative flex flex-col ">
-                <Project />
+                <Project lang={lang}/>
               </div>
             </div>
           </ReactFullpage.Wrapper>

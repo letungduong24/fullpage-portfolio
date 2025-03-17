@@ -14,7 +14,8 @@ import { IoIosInformationCircle } from "react-icons/io";
 import { MdContacts } from "react-icons/md";
 import { IoIosCloseCircle } from "react-icons/io";
 
-const Information = () => {
+const Information = ({lang}) => {
+  const [resource, setResource] = useState({})
   const [isToggle, setIsToggle] = useState(false)
   const [data, setData] = useState([])
   const [tab, setTab] = useState('')
@@ -24,23 +25,11 @@ const Information = () => {
     deleteSpeed: 200,
     loop: 0
   })
-  const info = {
-    personal: 
-        [
-            'Le Tung Duong',
-            '16/06/2004',
-            'Software Engineering, Thuyloi University',
-        ],
-    contact:
-        [
-            '0865641682',
-            'letungduong1624@gmail.com',
-        ]
-  }
+
 
   const handleToggle = (data) => {
     setIsToggle(true)
-    setData(info[data])
+    setData(resource[data])
     setTab(data)
   }
   const handleClose = () => {
@@ -48,15 +37,55 @@ const Information = () => {
     setData([])
     setTab('')
   }
-  
 
+  const resources = {
+    vi: {
+        title: 'Xin chào, tôi là Lê Tùng Dương',
+        subtitle: 'Thực tập sinh Lập trình Web',
+        name: 'Lê Tùng Dương',
+        main: 'Ngành Kỹ thuật phần mềm, Trường ĐH Thủy Lợi.',
+        personal: 
+            [
+                'Lê Tùng Dương',
+                '16/06/2004',
+                'Ngành Kỹ thuật phần mềm, Trường ĐH Thủy Lợi.',
+            ],
+        contact:
+            [
+                '0865641682',
+                'letungduong1624@gmail.com',
+            ]
+    },
+    en: {
+        title: "Hello, I'm Le Tung Duong",
+        subtitle: 'Web Developer Intern',
+        name: 'Le Tung Duong',
+        main: 'Software Engineering, Thuyloi University.',
+        personal: 
+            [
+                'Le Tung Duong',
+                '16/06/2004',
+                'Software Engineering, Thuyloi University.',
+            ],
+        contact:
+            [
+                '0865641682',
+                'letungduong1624@gmail.com',
+            ]
+    }
+  }
+  
+  useEffect(() => {
+    setResource(resources[lang])
+  }, [lang])
   
   return (
     <div>
         <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-600 font-semibold">
-            Hello, I'm Le Tung Duong
+
+            {resource.title}
         </h2>
-        <p className="text-gray-600 md:text-2xl">Web Developer Intern</p>
+        <p className="text-gray-600 md:text-2xl">{resource.subtitle}</p>
         <motion.h2 initial={{opacity: 0, scale: 0.8}} whileInView={{opacity: 0.1, scale: 1, transition: {duration: 0.7}}} 
             className='hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 tracking-widest text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl  overflow-hidden'>
             {text}
@@ -79,15 +108,15 @@ const Information = () => {
                 <motion.div initial={{opacity: 0, scale: 0.8}} whileInView={{opacity: 1, scale: 1, transition: {duration: 0.7}}} className="absolute -bottom-20 -left-20 xl:-bottom-10 xl:-left-40 bg-white p-4 rounded-2xl shadow-2xl text-gray-600">
                     <p className='font-bold text-lg flex items-center gap-2'>
                         <CgProfile className=''/>
-                        Le Tung Duong
-                    </p>
+                        {resource.name}
+                        </p>
                     <p className='font-semibold flex items-center gap-2'>
                         <LiaBirthdayCakeSolid />
                         16/06/2004
                     </p>
                     <p className='font-semibold flex items-center gap-2'>
                         <LiaUniversitySolid />
-                        Software Engineering, Thuyloi University.
+                        {resource.main}
                     </p>
                 </motion.div>
                 <motion.div initial={{opacity: 0, x:100}} whileInView={{opacity: 1, x:0, transition: {duration: 0.7}}} className="absolute -right-60 top-10 xl:-right-100 bg-white p-4 rounded-2xl shadow-2xl text-gray-600">

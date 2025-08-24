@@ -21,7 +21,7 @@ const Project = ({lang}) => {
             {
                 name: 'Sharring',
                 image: betrendy,
-                url: 'https://gpa.studywme.site/',
+                url: 'https://betrendy-front.vercel.app/',
                 description: 'Ứng dụng mạng xã hội đơn giản lấy cảm hứng từ Threads, với các chức năng cơ bản như đăng bài, bình luận, thích bài viết. Được xây dựng bằng ReactJS, TailwindCSS, Zustand, MongoDB và ExpressJS',
                 git: 'https://github.com/letungduong24/TLUGPACalculator'
             }

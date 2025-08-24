@@ -8,12 +8,12 @@ const Skill = ({lang}) => {
   const resources = {
     vi: {
       title: 'Kỹ năng',
-      skills: ['ReactJS', 'HTML & CSS', 'TailwindCSS', 'ExpressJS', 'Laravel', 'RESTful API', 'SQL Server', 'MySQL cơ bản', 'MongoDB cơ bản (Mongoose ODM)', 'Git & GitHub cơ bản (commit, branch, pull request)', 'Triển khai ứng dụng cơ bản với Vercel', 'Triển khai Website cơ bản trên Hosting (cPanel, DirectAdmin)']
+      skills: ['ReactJS', 'HTML & CSS', 'TailwindCSS', 'ExpressJS', 'ASP.NET Web API', 'SQL Server', 'MongoDB (Mongoose ODM)', 'Git & GitHub cơ bản (commit, branch, pull request)', 'Triển khai ứng dụng cơ bản với Vercel', 'Triển khai ứng dụng cơ bản với Docker Compose']
     },
     en: {
       title: 'My Technical Skills',
       skills: [
-        'ReactJS', 'HTML & CSS', 'TailwindCSS', 'ExpressJS', 'Laravel', 'RESTful API', 'SQL Server', 'Basic MySQL', 'Basic MongoDB (Mongoose ODM)', 'Basic Git & GitHub (commit, branch, pull request)', 'Basic deployment on Vercel', 'Basic deployment on Hosting (cPanel, DirectAdmin)'
+        'ReactJS', 'HTML & CSS', 'TailwindCSS', 'ExpressJS', 'Laravel', 'RESTful API', 'SQL Server', 'MongoDB (Mongoose ODM)', 'Basic Git & GitHub (commit, branch, pull request)', 'Basic deployment on Vercel', 'Basic deployment with Docker Compose'
       ]
     }
   }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion';
 import theshop from '../assets/theshop.png'
-import gpa from '../assets/gpa.png'
+import betrendy from '../assets/betrendy.png'
 import { FaGithub } from "react-icons/fa";
 
 const Project = ({lang}) => {
@@ -12,17 +12,17 @@ const Project = ({lang}) => {
         source: 'Mã nguồn',
         projects: [
             {
-                name: 'The Shop - Dự án E-commerce Fullstack',
+                name: 'The Shop',
                 image: theshop,
                 url: 'https://fullstack-ecommerce-front.vercel.app/',
-                description: 'The Shop – Một cửa hàng thương mại điện tử full-stack về thời trang, được xây dựng bằng React.js, Tailwind CSS, Redux, MongoDB và Express. Thiết kế giao diện thân thiện với người dùng, responsive, đảm bảo trải nghiệm mua sắm mượt mà trên mọi thiết bị. Các tính năng bao gồm duyệt sản phẩm, quản lý giỏ hàng, xác thực người dùng và thanh toán an toàn.',
+                description: 'The Shop – Một cửa hàng thương mại điện tử về thời trang, được xây dựng bằng React.js, Tailwind CSS, Redux, MongoDB và ExpressJS. Thiết kế giao diện thân thiện với người dùng, responsive, đảm bảo trải nghiệm mua sắm mượt mà trên mọi thiết bị. Các tính năng bao gồm duyệt sản phẩm, quản lý giỏ hàng, xác thực người dùng và thanh toán an toàn.',
                 git: 'https://github.com/letungduong24/fullstack_ecommerce'
             },
             {
-                name: 'Ứng dụng tính GPA cho sinh viên Trường ĐH Thủy Lợi',
-                image: gpa,
+                name: 'Sharring',
+                image: betrendy,
                 url: 'https://gpa.studywme.site/',
-                description: 'Ứng dụng tính GPA dành cho sinh viên Đại học Thủy Lợi, sử dụng API từ sinhvien.tlu.edu.vn. Được xây dựng bằng React.js để mang lại trải nghiệm người dùng linh hoạt và responsive, ứng dụng lấy dữ liệu sinh viên và tính toán GPA, giúp người dùng theo dõi kết quả học tập một cách hiệu quả.',
+                description: 'Ứng dụng mạng xã hội đơn giản lấy cảm hứng từ Threads, với các chức năng cơ bản như đăng bài, bình luận, thích bài viết. Được xây dựng bằng ReactJS, TailwindCSS, Zustand, MongoDB và ExpressJS',
                 git: 'https://github.com/letungduong24/TLUGPACalculator'
             }
         ]
@@ -41,12 +41,13 @@ const Project = ({lang}) => {
 
             },
             {
-                name: 'TLU GPA Calculator',
-                image: gpa,
-                url: 'https://gpa.studywme.site/',
-                description: 'A GPA calculation application for Thuy Loi University students, utilizing the API from sinhvien.tlu.edu.vn. Built with React.js for a dynamic and responsive user experience, the app fetches student data and calculates GPA, helping users track their academic performance efficiently.',
-                git: 'https://github.com/letungduong24/TLUGPACalculator'
+                name: 'Sharring',
+                image: betrendy,
+                url: 'https://betrendy-front.vercel.app/',
+                description: 'A simple social networking application inspired by Threads, featuring basic functions such as posting, commenting, and liking posts. Built with ReactJS, TailwindCSS, Zustand, MongoDB, and ExpressJS.',
+                git: 'https://github.com/letungduong24/sharring'
             }
+
         ]
     },
     

@@ -41,7 +41,7 @@ const Information = ({lang}) => {
   const resources = {
     vi: {
         title: 'Xin chào, tôi là Lê Tùng Dương',
-        subtitle: 'Thực tập sinh Lập trình Web',
+        subtitle: 'Sinh viên Kỹ thuật phần mềm',
         name: 'Lê Tùng Dương',
         main: 'Ngành Kỹ thuật phần mềm, Trường ĐH Thủy Lợi.',
         personal: 
@@ -53,14 +53,14 @@ const Information = ({lang}) => {
         contact:
             [
                 '0865641682',
-                'letungduong1624@gmail.com',
+                'contact@duongletung.id.vn',
             ]
     },
     en: {
         title: "Hello, I'm Le Tung Duong",
-        subtitle: 'Web Developer Intern',
+        subtitle: 'Software Engineering Student',
         name: 'Le Tung Duong',
-        main: 'Software Engineering, Thuyloi University.',
+        main: 'Software Engineering Student',
         personal: 
             [
                 'Le Tung Duong',

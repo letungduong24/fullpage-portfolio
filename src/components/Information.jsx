@@ -70,7 +70,7 @@ const Information = ({lang}) => {
         contact:
             [
                 '0865641682',
-                'letungduong1624@gmail.com',
+                'contact@duongletung.id.vn',
             ]
     }
   }
@@ -126,7 +126,7 @@ const Information = ({lang}) => {
                     </p>
                     <p className='font-semibold flex items-center gap-2'>
                         <IoIosMail />
-                        letungduong1624@gmail.com
+                        contact@duongletung.id.vn
                     </p>
                     <a target='_blank' href='https://www.facebook.com/letungduongg/' className='hover:text-gray-400 hover:scale-105 transition-all duration-300 font-semibold flex items-center gap-2'>
                         <FaFacebook />
